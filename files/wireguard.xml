@@ -1,0 +1,4 @@
+<manifest>
+  <remote name="zx2c4" fetch="https://git.zx2c4.com/" />
+  <project remote="zx2c4" name="WireGuard" path="WireGuard" revision="master" />
+</manifest>
