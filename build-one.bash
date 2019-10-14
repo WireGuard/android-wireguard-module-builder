@@ -5,6 +5,7 @@ set -ex
 BASE="$(readlink -f "$(dirname "$(readlink -f "$0")")")"
 KERNEL_DIR="$BASE/kernels/$1"
 [[ -d $KERNEL_DIR ]] || { echo "Error: '$0' does not exist" >&2; exit 1; }
+[[ -f $KERNEL_DIR/do.bash && -f $KERNEL_DIR/manifest.xml && -f $KERNEL_DIR/version-hashes.txt ]] || { echo "WARNING: skipping $1, because missing files" >&2; exit 0; }
 
 # Step 1) Account for already built modules by hard linking new hashes to the old names.
 first=""
