@@ -1,0 +1,19 @@
+<manifest>
+  <remote name="aosp" fetch="https://android.googlesource.com/" />
+  <default revision="refs/tags/android-10.0.0_r0.12" remote="aosp" sync-j="4" />
+
+  <project path="build" name="kernel/build" revision="master" clone-depth="1" />
+
+  <project path="private/msm-google" name="kernel/msm" clone-depth="1">
+    <linkfile src="build.config.bonito" dest="build.config" />
+  </project>
+  <project path="private/msm-google/techpack/audio" name="kernel/msm-extra" clone-depth="1" />
+  <project path="private/msm-google-modules/wlan/qca-wifi-host-cmn" name="kernel/msm-modules/qca-wfi-host-cmn" clone-depth="1" />
+  <project path="private/msm-google-modules/wlan/qcacld-3.0" name="kernel/msm-modules/qcacld" clone-depth="1" />
+  <project path="private/msm-google-modules/wlan/fw-api" name="kernel/msm-modules/wlan-fw-api" clone-depth="1" />
+
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" revision="pie-release" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" revision="pie-release" clone-depth="1" />
+  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" revision="android10-dev" clone-depth="1" groups="partner" />
+  <project path="prebuilts-master/misc" name="platform/prebuilts/misc" revision="pie-release" clone-depth="1" />
+</manifest>
