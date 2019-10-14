@@ -1,0 +1,1 @@
+65de97cf5e79e3657d63ee4e6aad222d9e32b35876e19b7818599d3aaa428899|Linux version 3.18.137-g72a7a64494e (android-build@wphn3.hot.corp.google.com) (gcc version 4.9.x 20150123 (prerelease) (GCC) ) #1 SMP PREEMPT Fri Sep 27 18:40:34 UTC 2019
