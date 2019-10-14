@@ -1,0 +1,31 @@
+diff --git a/src/ratelimiter.c b/src/ratelimiter.c
+index e33ec72a..27a34071 100644
+--- a/src/ratelimiter.c
++++ b/src/ratelimiter.c
+@@ -19,6 +19,7 @@
+ #include <linux/siphash.h>
+ #include <linux/mm.h>
+ #include <linux/slab.h>
++#include <linux/timer.h>
+ #include <net/ip.h>
+ 
+ static struct kmem_cache *entry_cache;
+@@ -29,6 +30,7 @@ static u64 init_refcnt; /* Protected by init_lock, hence not atomic. */
+ static atomic_t total_entries = ATOMIC_INIT(0);
+ static unsigned int max_entries, table_size;
+ static void wg_ratelimiter_gc_entries(struct work_struct *);
++struct tvec_base { char herp_derp; } tvec_base_deferrable;
+ static DECLARE_DEFERRABLE_WORK(gc_work, wg_ratelimiter_gc_entries);
+ static struct hlist_head *table_v4;
+ #if IS_ENABLED(CONFIG_IPV6)
+@@ -216,6 +218,10 @@ err:
+ 
+ void wg_ratelimiter_uninit(void)
+ {
++	struct timer_list dummy_timer;
++	setup_deferrable_timer_on_stack(&dummy_timer, NULL, 0);
++	gc_work.timer.base = dummy_timer.base;
++
+ 	mutex_lock(&init_lock);
+ 	if (!init_refcnt || --init_refcnt)
+ 		goto out;
