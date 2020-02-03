@@ -1,14 +1,14 @@
 <manifest>
   <remote name="aosp" fetch="https://android.googlesource.com/" />
-  <default revision="refs/tags/android-10.0.0_r0.35" remote="aosp" sync-j="4" />
+  <default revision="refs/tags/android-10.0.0_r0.42" remote="aosp" sync-j="4" />
 
   <project path="build" name="kernel/build" revision="master" clone-depth="1" />
 
   <project path="private/msm-google" name="kernel/msm" clone-depth="1">
     <linkfile src="build.config" dest="build.config" />
   </project>
-  <project path="private/msm-google/techpack/audio" name="kernel/msm-extra" revision="android-msm-coral-4.14-android10" clone-depth="1" />
-  <project path="private/msm-google-modules/data-kernel" name="kernel/msm-modules/data-kernel" revision="refs/tags/android-10.0.0_r0.30" clone-depth="1" />
+  <project path="private/msm-google/techpack/audio" name="kernel/msm-extra" clone-depth="1" />
+  <project path="private/msm-google-modules/data-kernel" name="kernel/msm-modules/data-kernel" clone-depth="1" />
   <project path="private/msm-google-modules/wlan/qca-wifi-host-cmn" name="kernel/msm-modules/qca-wfi-host-cmn" clone-depth="1" />
   <project path="private/msm-google-modules/wlan/qcacld-3.0" name="kernel/msm-modules/qcacld" clone-depth="1" />
   <project path="private/msm-google-modules/wlan/fw-api" name="kernel/msm-modules/wlan-fw-api" clone-depth="1" />
