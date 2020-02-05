@@ -1,0 +1,10 @@
+<manifest>
+  <remote name="aosp" fetch="https://android.googlesource.com/" />
+  <remote name="github_CaptainThrowback" fetch="https://github.com/CaptainThrowback" />
+
+  <default remote="aosp" sync-j="4" />
+
+  <project path="kernel" name="android_kernel_htc_ocn" remote="github_CaptainThrowback" revision="3.38.1405.1_R5" clone-depth="1" />
+  <!-- use an older version of the toolchain as building this kernel requires GCC, while GCC is absent from the latest version -->
+  <project path="aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" revision="ndk-r13-release" clone-depth="1" />
+</manifest>
