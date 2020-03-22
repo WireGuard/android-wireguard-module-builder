@@ -32,4 +32,4 @@ $ ./build-one.bash crosshatch
 
 These are built, signed, and uploaded to [the WireGuard download server](https://download.wireguard.com/android-module/). They can automatically be used by the [WireGuard app](https://play.google.com/store/apps/details?id=com.wireguard.android):
 
-![Early debug alpha of WireGuard app downloading and inserting kernel module](https://data.zx2c4.com/wireguard-android-download-load-module-oct-13-2019.gif)
+![WireGuard app downloading and inserting kernel module](https://data.zx2c4.com/wireguard-android-download-kernel-module.gif)
