@@ -1,10 +1,10 @@
 <manifest>
   <remote name="aosp" fetch="https://android.googlesource.com/" />
-  <default revision="refs/tags/android-10.0.0_r0.61" remote="aosp" sync-j="4" />
+  <default revision="refs/tags/android-10.0.0_r0.65" remote="aosp" sync-j="4" />
 
   <project path="build" name="kernel/build" revision="master" clone-depth="1" />
 
-  <project path="private/msm-google" name="kernel/msm" revision="df3ca60d978c57aca37b27b059622557837d05a1" clone-depth="1">
+  <project path="private/msm-google" name="kernel/msm" clone-depth="1">
     <linkfile src="build.config.bluecross" dest="build.config" />
   </project>
   <project path="private/msm-google/techpack/audio" name="kernel/msm-extra" clone-depth="1" />

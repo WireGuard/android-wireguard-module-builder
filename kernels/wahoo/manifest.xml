@@ -1,6 +1,6 @@
 <manifest>
   <remote name="aosp" fetch="https://android.googlesource.com/" />
-  <default revision="refs/tags/android-10.0.0_r0.60" remote="aosp" sync-j="4" />
+  <default revision="refs/tags/android-10.0.0_r0.64" remote="aosp" sync-j="4" />
 
   <project path="build" name="kernel/build" revision="master" clone-depth="1" />
 
