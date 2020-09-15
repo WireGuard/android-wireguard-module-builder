@@ -1,6 +1,6 @@
 <manifest>
   <remote name="aosp" fetch="https://android.googlesource.com/" />
-  <default revision="refs/tags/android-10.0.0_r0.77" remote="aosp" sync-j="4" />
+  <default revision="refs/tags/android-11.0.0_r0.2" remote="aosp" sync-j="4" />
 
   <project path="build" name="kernel/build" revision="master" clone-depth="1" />
 
@@ -14,6 +14,6 @@
 
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" revision="pie-release" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" revision="pie-release" clone-depth="1" />
-  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" revision="android10-dev" clone-depth="1" groups="partner" />
+  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" revision="android11-release" clone-depth="1" groups="partner" />
   <project path="prebuilts-master/misc" name="platform/prebuilts/misc" revision="pie-release" clone-depth="1" />
 </manifest>
