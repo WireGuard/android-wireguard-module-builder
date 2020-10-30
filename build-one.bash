@@ -29,7 +29,7 @@ cd "$D"
 # Step 3) Initialize repo with manifests and fetch repositories.
 mkdir -p manifest
 cd manifest
-git init
+git init --initial-branch=master
 git config user.email "$(id -un)@$(hostname)"
 git config user.name "$(id -un)"
 cp "$KERNEL_DIR/manifest.xml" default.xml
