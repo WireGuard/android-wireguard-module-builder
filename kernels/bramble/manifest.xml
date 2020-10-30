@@ -1,0 +1,35 @@
+<manifest>
+  <remote name="aosp" fetch="https://android.googlesource.com/" />
+  <default revision="refs/tags/android-11.0.0_r0.146" remote="aosp" sync-j="4" />
+
+  <project path="build" name="kernel/build" revision="1ce72bdb374f68b032a55757b6a1981348adcbd9" groups="partner"/>
+  <project path="private/msm-google" name="kernel/msm" groups="partner" >
+    <linkfile src="build.config.redbull" dest="build.config" />
+    <linkfile src="build_redbull-gki.sh" dest="build_redbull-gki.sh" />
+    <linkfile src="build_redbull.sh" dest="build_redbull.sh" />
+    <linkfile src="build_sm8250.sh" dest="build_sm8250.sh" />
+    <linkfile src="build_sm7250.sh" dest="build_sm7250.sh" />
+  </project>
+  <project path="private/msm-google/arch/arm64/boot/dts/vendor" name="kernel/msm-extra/devicetree" groups="partner" />
+  <project path="private/msm-google/arch/arm64/boot/dts/vendor/qcom/camera" name="kernel/msm-extra/camera-devicetree" groups="partner" />
+  <project path="private/msm-google/arch/arm64/boot/dts/vendor/qcom/display" name="kernel/msm-extra/display-devicetree" groups="partner" />
+  <project path="private/msm-google/techpack/audio" name="kernel/msm-extra" groups="partner" />
+  <project path="private/msm-google/techpack/camera" name="kernel/msm-extra/camera-kernel" groups="partner" />
+  <project path="private/msm-google/techpack/dataipa" name="kernel/msm-extra/dataipa" groups="partner" />
+  <project path="private/msm-google/techpack/display" name="kernel/msm-extra/display-drivers" groups="partner" />
+  <project path="private/msm-google/techpack/video" name="kernel/msm-extra/video-driver" groups="partner" />
+  <project path="private/msm-google-modules/data-kernel" name="kernel/msm-modules/data-kernel" groups="partner" />
+  <project path="private/msm-google-modules/wlan/qca-wifi-host-cmn" name="kernel/msm-modules/qca-wfi-host-cmn" groups="partner" />
+  <project path="private/msm-google-modules/wlan/qcacld-3.0" name="kernel/msm-modules/qcacld" groups="partner" />
+  <project path="private/msm-google-modules/wlan/fw-api" name="kernel/msm-modules/wlan-fw-api" groups="partner" />
+  <project path="private/msm-google-modules/touch/fts" name="kernel/msm-modules/fts_touch" groups="partner" />
+  <project path="private/msm-google-modules/touch/sec" name="kernel/msm-modules/sec_touch" groups="partner" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" revision="pie-release" clone-depth="1" groups="partner" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" revision="pie-release" clone-depth="1" groups="partner" />
+  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" revision="f71cc7fa68ac644595257d6fdebc2e543cb7041c" clone-depth="1" groups="partner" />
+  <project path="prebuilts-master/misc" name="platform/prebuilts/misc" revision="pie-release" clone-depth="1" groups="partner" />
+  <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" revision="5cc6456425d98d8fce685dcb13d3ad8baffccccf" groups="partner" />
+  <project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" revision="master" />
+  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" revision="d020de865fb0d220e9928ccb46c500888634b9ea" groups="partner" />
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" revision="05711ec41f24d15e13c3cb85f1e12735e3421e08" groups="partner" />
+</manifest>
