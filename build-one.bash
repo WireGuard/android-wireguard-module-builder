@@ -4,6 +4,8 @@ set -ex
 [[ $# -eq 1 ]] || { echo "Usage: $0 KERNEL_NAME" >&2; exit 1; }
 BASE="$(readlink -f "$(dirname "$(readlink -f "$0")")")"
 KERNEL_DIR="$BASE/kernels/$1"
+# For use in kernel-specific do.bash files
+export KERNEL_DIR
 [[ -d $KERNEL_DIR ]] || { echo "Error: '$0' does not exist" >&2; exit 1; }
 
 # Step 1) Account for already built modules by hard linking new hashes to the old names.
